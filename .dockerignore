@@ -1,0 +1,21 @@
+# VSCode
+.vscode
+.settings/
+
+# doc
+diagrama*
+*.jpg
+*.md
+!README.md
+
+### DOCKER TEMPLATE ###
+.git
+.gitignore
+!README.md
+Dockerfile
+
+### JAVA TEMPLATE ###
+target/
+.classpath
+.project
+/bin/

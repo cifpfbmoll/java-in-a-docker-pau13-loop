@@ -9,6 +9,13 @@ COPY . /usr/home/src/app
 # Create an executable jar executing mvn package command 
 RUN mvn -f /usr/home/src/app/javaindocker/pom.xml clean package
 
+# Create an user to access the container as not root 
+RUN useradd -ms /bin/bash 1001
+
+# Set specifications user 1001
+USER 1001
+WORKDIR $HOME/app/javaindocker
+
 # SECOND STAGE - PACKAGE STAGE:
 # In this stage we will run the jar that contains the app
 
